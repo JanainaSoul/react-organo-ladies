@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Banner from './componentes/Banner/Banner.js';
 //import CampoTexto from './componentes/CampoTexto';
 import Formulario from './componentes/Formulario';
+import Comite from './componentes/Comite/index.js';
 
 function App() {
 
@@ -15,6 +16,9 @@ function App() {
     <div className="App">
       <Banner/>
       <Formulario novoMembroCadastrado={membro => aoNovoMembroCadastrado(membro)}/>
+      <Comite nome="Eventos e Merchan" />
+      <Comite nome="RP" />
+      <Comite nome="Afiliação" />
 
     </div>
   );

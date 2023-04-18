@@ -26,7 +26,6 @@ const Formulario = (props) => {
         'Licença'
     ]
 
-
     const comites = [
         '',
         'Eventos e Merchan',
@@ -42,14 +41,13 @@ const Formulario = (props) => {
         'Não se aplica'
     ]
 
-
     const [nome, setNome] = useState('')
     const [derbyName, setderbyName] = useState('')
     const [derbyNumber, setderbyNumber] = useState('')
     const [imagem, setImagem] = useState('')
     const [pronome, setPronome] = useState('')
     const [modalidade, setModalidade] = useState('')
-    const [comite, setComite] = useState('')
+    const [comite, setComites] = useState('')
     const [subcomite, setSubComite] = useState('')
 
 
@@ -118,25 +116,12 @@ const Formulario = (props) => {
                 />
                 <ListaSuspensaComites 
                     obrigatorio={true} 
-                    label="Comitê 1" 
+                    label="Comitê" 
                     comites={comites}
-                    valor={comite}
-                    aoPreencher={valor => setComite(valor)}
+                    valor={comites}
+                    aoPreencher={valor => setComites(valor)}
                     />
-                <ListaSuspensaComites 
-                    obrigatorio={true} 
-                    label="Comitê 2" 
-                    comites={comites}
-                    valor={comite}
-                    aoPreencher={valor => setComite(valor)}
-                    />
-                <ListaSuspensaComites
-                    obrigatorio={true}  
-                    label="Comitê 3"
-                    comites={comites}
-                    valor={comite}
-                    aoPreencher={valor => setComite(valor)}
-                    />
+                
                 <ListaSuspensaSubComites 
                     obrigatorio={true} 
                     label="SubComitê" 
