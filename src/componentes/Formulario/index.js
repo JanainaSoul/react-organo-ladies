@@ -2,7 +2,6 @@ import { useState } from 'react'
 import Botao from '../Botao'
 import CampoTexto from '../CampoTexto'
 import ListaSuspensaComites from '../ListaSuspensaComites'
-import ListaSuspensa from '../ListaSuspensaComites'
 import ListaSuspensaModalidades from '../ListaSuspensaModalidades'
 import ListaSuspensaPronomes from '../ListaSuspensaPronomes'
 import ListaSuspensaSubComites from '../ListaSuspensaSubComites'
@@ -10,7 +9,14 @@ import ListaSuspensaSubComites from '../ListaSuspensaSubComites'
 
 import './Formulario.css'
 
-const Formulario = () => {
+const Formulario = (props) => {
+
+    const pronomes = [
+        '',
+        'Ela/Dela',
+        'Ele/Dele',
+        'Elu/Delu',
+    ]
 
     const modalidades = [
         '',
@@ -32,15 +38,10 @@ const Formulario = () => {
 
     const subcomites = [
         '',
-        'Refs'
+        'Refs',
+        'Não se aplica'
     ]
 
-    const pronomes = [
-        '',
-        'Ela/Dela',
-        'Ele/Dele',
-        'Elu/Delu',
-    ]
 
     const [nome, setNome] = useState('')
     const [derbyName, setderbyName] = useState('')
@@ -54,7 +55,19 @@ const Formulario = () => {
 
     const aoSubmeter = (evento) =>{
         evento.preventDefault()
-        console.log('Formulário foi submetido =>', nome, derbyName, derbyNumber, imagem, pronome, modalidade, comite, subcomite)
+        //console.log('Formulário foi submetido =>', nome, derbyName, derbyNumber, imagem, pronome, modalidade, comite, subcomite)
+        props.novoMembroCadastrado({
+            nome,
+            derbyName,
+            derbyNumber,
+            imagem,
+            pronome,
+            modalidade,
+            comite,
+            subcomite
+        }
+
+        )
     }
 
     return (
@@ -97,6 +110,7 @@ const Formulario = () => {
                     aoPreencher={valor => setModalidade(valor)}
                     />
                 <CampoTexto 
+                    obrigatorio={true} 
                     label="Imagem" 
                     placeholder="Digite o endereço da imagem"
                     valor={imagem}
@@ -110,21 +124,21 @@ const Formulario = () => {
                     aoPreencher={valor => setComite(valor)}
                     />
                 <ListaSuspensaComites 
-                    //obrigatorio={true} 
+                    obrigatorio={true} 
                     label="Comitê 2" 
                     comites={comites}
                     valor={comite}
                     aoPreencher={valor => setComite(valor)}
                     />
                 <ListaSuspensaComites
-                    //obrigatorio={true}  
+                    obrigatorio={true}  
                     label="Comitê 3"
                     comites={comites}
                     valor={comite}
                     aoPreencher={valor => setComite(valor)}
                     />
                 <ListaSuspensaSubComites 
-                    //obrigatorio={true} 
+                    obrigatorio={true} 
                     label="SubComitê" 
                     subcomites={subcomites}
                     valor={subcomite}

@@ -9,6 +9,7 @@ const ListaSuspensaComites = (props) => {
                 {props.comites.map(item => <option key={item}>{item}</option>)}
             </select>
         </div>
+        
     )
 }
 
