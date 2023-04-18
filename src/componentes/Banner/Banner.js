@@ -1,6 +1,6 @@
 import './Banner.css'
 
-export const Banner = () => {
+const Banner = () => {
     //JSX parece HTML mas não é
     return (
         <header className="banner">
@@ -9,4 +9,6 @@ export const Banner = () => {
 
     )
 }
+
+export default Banner
 
