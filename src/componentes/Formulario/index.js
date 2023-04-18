@@ -45,25 +45,29 @@ const Formulario = () => {
         
     ]
 
+    const aoSubmeter = (evento) =>{
+        evento.preventDefault()
+        console.log('Formulário foi submetido')
+    }
+        
+
     return (
         <section className="formulario">
-            <form>
+            <form onSubmit={aoSubmeter}>
                 <h2>Preencha os dados para criar o mapa de cada comitê!</h2>
-                <CampoTexto label="Nome" placeholder="Digite seu nome"/>
-                <CampoTexto label="Derby Name" placeholder="Digite seu Derby Name"/>
-                <CampoTexto label="Derby Number" placeholder="Digite seu Derby Number"/>
-                <ListaSuspensaPronomes label="Pronome" pronomes={pronomes} />
-                <ListaSuspensaModalidades label="Modalidade" modalidades={modalidades}/>
+                <CampoTexto obrigatorio={true} label="Nome" placeholder="Digite seu nome"/>
+                <CampoTexto obrigatorio={true} label="Derby Name" placeholder="Digite seu Derby Name"/>
+                <CampoTexto obrigatorio={true} label="Derby Number" placeholder="Digite seu Derby Number"/>
+                <ListaSuspensaPronomes obrigatorio={true} label="Pronome" pronomes={pronomes} />
+                <ListaSuspensaModalidades obrigatorio={true} label="Modalidade" modalidades={modalidades}/>
                 <CampoTexto label="Imagem" placeholder="Digite o endereço da imagem"/>
-                <ListaSuspensaComites label="Comitê 1" comites={comites}/>
+                <ListaSuspensaComites obrigatorio={true} label="Comitê 1" comites={comites}/>
                 <ListaSuspensaComites label="Comitê 2" comites={comites}/>
                 <ListaSuspensaComites label="Comitê 3"comites={comites}/>
                 <ListaSuspensaSubComites label="SubComitê" subcomites={subcomites}/>
                 < Botao >
                     Criar Card
                 </Botao >
-                
-                
             </form>
         </section>
     )

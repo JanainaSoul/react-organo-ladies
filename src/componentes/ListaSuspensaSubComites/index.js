@@ -5,7 +5,7 @@ const ListaSuspensaSubComites = (props) => {
     return (
         <div className="lista-suspensa">
             <label>{props.label}</label>
-            <select>
+            <select required={props.obrigatorio}>
                 {props.subcomites.map(item => <option key={item}>{item}</option>)}
             </select>
         </div>
