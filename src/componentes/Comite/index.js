@@ -1,10 +1,11 @@
 import './Comite.css'
 
-const Comite = (props) => {
+const Comite = (props) => { //dumb component
+    const css = { backgroundColor:props.corSecundaria }
+
     return (
-        <section className="comite">
-            <h3>{props.nome}</h3> 
-            
+        <section className="comite" style={css}>
+            <h3 style={{borderColor:props.corPrimaria}}>{props.nome}</h3> 
         </section>
     )
 }
