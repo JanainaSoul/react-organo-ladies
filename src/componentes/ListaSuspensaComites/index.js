@@ -1,6 +1,6 @@
-import './ListaSuspensaUm.css'
+import './ListaSuspensa.css'
 
-const ListaSuspensaUm = (props) => {
+const ListaSuspensaComites = (props) => {
     console.log(props.comites)
     return (
         <div className="lista-suspensa">
@@ -12,4 +12,4 @@ const ListaSuspensaUm = (props) => {
     )
 }
 
-export default ListaSuspensaUm
+export default ListaSuspensaComites
