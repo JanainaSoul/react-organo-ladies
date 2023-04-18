@@ -1,14 +1,12 @@
 import './CampoTexto.css'
+import { useState} from 'react'
 
 const CampoTexto = (props) => { //props = propriedades
 
     const placeholderModificada = `${props.placeholder}...`
 
-    let valor = 'Guilherme Silveira'
-
-    const aoPrencher = (evento) => {
-        valor = evento.target.value
-        console.log(valor)
+    const aoPreencher = (evento) => {
+        props.aoPreencher(evento.target.value)
     }
     
     return (
@@ -16,7 +14,7 @@ const CampoTexto = (props) => { //props = propriedades
             <label>
                 {props.label}
             </label>
-            <input value={valor} onChange={aoPrencher} required={props.obrigatorio} placeholder={placeholderModificada} />
+            <input value={props.valor} onChange={aoPreencher} required={props.obrigatorio} placeholder={placeholderModificada} />
         </div>
     )
 }

@@ -1,11 +1,11 @@
 import './ListaSuspensa.css'
 
 const ListaSuspensaComites = (props) => {
-    console.log(props.comites)
+    
     return (
         <div className="lista-suspensa">
             <label>{props.label}</label>
-            <select required={props.obrigatorio}>
+            <select onChange={evento => props.aoPreencher(evento.target.value)} required={props.obrigatorio} value={props.value}>
                 {props.comites.map(item => <option key={item}>{item}</option>)}
             </select>
         </div>
