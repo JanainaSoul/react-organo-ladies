@@ -1,3 +1,29 @@
+# Organo Ladies
+
+
+# Linguagens
+
+Html
+
+CSS
+
+JavaScript
+
+# Aprendizados:
+
+01 - uma biblioteca declarativa:
+
+Criamos um novo projeto React;
+
+Criamos componentes funcionais;
+
+Estilizamos componentes com CSS;
+
+Analisamos as dependências do projeto;
+
+Analisamos os comandos disponíveis no package.json.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
