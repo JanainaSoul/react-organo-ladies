@@ -6,6 +6,41 @@ import Comite from './componentes/Comite/index.js';
 
 function App() {
 
+  const pronomes = [
+    
+    {
+    nome:'Ela/Dela',
+    },
+    {
+    nome:'Ele/Dele',
+    },
+    {
+    nome:'Elu/Delu',
+    }
+]
+
+const modalidades = [
+  {
+    nome:'',
+  },
+  {
+    nome:'Recreativo',
+  },
+  {
+    nome:'Competitivo',
+  },
+  {
+    nome:'Arbitragem',
+  },
+  {
+    nome:'Licença'
+  },
+  {
+    nome: 'Ainda não escolhi'
+  }
+]
+
+
   const comites = [
     {
       nome: 'Eventos e Merchan',
@@ -31,9 +66,31 @@ function App() {
       nome: 'Financeiro',
       corPrimaria: '#DB6EBF',
       corSecundaria: '#FAE9F5'
+    },
+    {
+      nome: 'Refs',
+      corPrimaria: '#FFBA05',
+      corSecundaria: '#FFF5D9'
+    },
+    {
+      nome: 'Indefinido',
+      corPrimaria: '#FF8A29',
+      corSecundaria: '#FFEEDF'
     }
-
   ]
+
+    const subcomites = [
+    {
+      nome: 'Refs',
+      corPrimaria: '#FFBA05',
+      corSecundaria: '#FFF5D9'
+    },
+    {
+      nome: 'Não se aplica',
+      
+    }
+  ]
+  
 
   const [membros, setMembros ] = useState('')
   const aoNovoMembroCadastrado =(membro) => {
@@ -44,7 +101,13 @@ function App() {
   return (
     <div className="App">
       <Banner/>
-      <Formulario novoMembroCadastrado={membro => aoNovoMembroCadastrado(membro)}/>
+      <Formulario 
+      pronomes={pronomes.map(pronome => pronome.nome)}
+      modalidades={modalidades.map(modalidade => modalidade.nome)}
+      comites={comites.map(comite => comite.nome)} 
+      subcomites={subcomites.map(subcomite => subcomite.nome)}
+      novoMembroCadastrado={membro => aoNovoMembroCadastrado(membro)}
+      />
       {comites.map(comite => <Comite key={comite.nome} nome={comite.nome} corPrimaria={comite.corPrimaria} corSecundaria={comite.corSecundaria}/>)}
       
 

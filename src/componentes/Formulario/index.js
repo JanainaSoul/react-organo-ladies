@@ -11,29 +11,8 @@ import './Formulario.css'
 
 const Formulario = (props) => {
 
-    const pronomes = [
-        '',
-        'Ela/Dela',
-        'Ele/Dele',
-        'Elu/Delu',
-    ]
-
-    const modalidades = [
-        '',
-        'Recreativo',
-        'Competitivo',
-        'Arbitragem',
-        'Licença'
-    ]
-
-    const comites = [
-        '',
-        'Eventos e Merchan',
-        'RP',
-        'Afiliação',
-        'Treinamento',
-        'Financeiro',
-    ]
+ 
+    
 
     const subcomites = [
         '',
@@ -96,14 +75,14 @@ const Formulario = (props) => {
                 <ListaSuspensaPronomes 
                     obrigatorio={true} 
                     label="Pronome" 
-                    pronomes={pronomes} 
+                    pronomes={props.pronomes} 
                     valor={pronome}
                     aoPreencher={valor => setPronome(valor)}
                     />
                 <ListaSuspensaModalidades 
                     obrigatorio={true} 
                     label="Modalidade" 
-                    modalidades={modalidades}
+                    modalidades={props.modalidades}
                     valor={modalidade}
                     aoPreencher={valor => setModalidade(valor)}
                     />
@@ -117,15 +96,15 @@ const Formulario = (props) => {
                 <ListaSuspensaComites 
                     obrigatorio={true} 
                     label="Comitê" 
-                    comites={comites}
-                    valor={comites}
+                    comites={props.comites}
+                    valor={comite}
                     aoPreencher={valor => setComites(valor)}
                     />
                 
                 <ListaSuspensaSubComites 
                     obrigatorio={true} 
                     label="SubComitê" 
-                    subcomites={subcomites}
+                    subcomites={props.subcomites}
                     valor={subcomite}
                     aoPreencher={valor => setSubComite(valor)}
                     />
