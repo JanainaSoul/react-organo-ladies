@@ -1,0 +1,14 @@
+<ListaSuspensaComites 
+                    obrigatorio={true} 
+                    label="Comitê 2" 
+                    comites={listaComites}
+                    valor={comites}
+                    aoPreencher={valor => setComites(valor)}
+                    />
+                <ListaSuspensaComites
+                    obrigatorio={true}  
+                    label="Comitê 3"
+                    comites={listaComites}
+                    valor={comites}
+                    aoPreencher={valor => setComites(valor)}
+                    />
