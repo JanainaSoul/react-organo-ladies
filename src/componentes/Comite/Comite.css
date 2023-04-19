@@ -5,8 +5,15 @@
 
 }
 
-.comite h3 {
+.comite h4 {
     font-size: 32px;
+    border-bottom: 4px solid;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.comite h3 {
+    font-size: 16px;
     border-bottom: 4px solid;
     display: inline-block;
     padding-bottom: 8px;

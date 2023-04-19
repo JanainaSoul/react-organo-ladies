@@ -7,7 +7,9 @@ import Comite from './componentes/Comite/index.js';
 function App() {
 
   const pronomes = [
-    
+    {
+      nome: '',
+    },
     {
     nome:'Ela/Dela',
     },
@@ -113,7 +115,8 @@ const modalidades = [
           nome={comite.nome} 
           corPrimaria={comite.corPrimaria} 
           corSecundaria={comite.corSecundaria}
-          membros={membros}/>)}
+          membros={membros.filter(membro => membro.comite === comite.nome)}
+          />)}
       
 
     </div>
