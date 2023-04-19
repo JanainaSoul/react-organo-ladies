@@ -73,7 +73,7 @@ const modalidades = [
       corSecundaria: '#FFF5D9'
     },
     {
-      nome: 'Indefinido',
+      nome: 'Não escolhi',
       corPrimaria: '#FF8A29',
       corSecundaria: '#FFEEDF'
     }
@@ -86,13 +86,13 @@ const modalidades = [
       corSecundaria: '#FFF5D9'
     },
     {
-      nome: 'Não se aplica',
+      nome: 'Não participa',
       
     }
   ]
   
 
-  const [membros, setMembros ] = useState('')
+  const [membros, setMembros ] = useState([])
   const aoNovoMembroCadastrado =(membro) => {
     console.log(membro)
     setMembros([...membros, membro])
@@ -102,13 +102,18 @@ const modalidades = [
     <div className="App">
       <Banner/>
       <Formulario 
-      pronomes={pronomes.map(pronome => pronome.nome)}
-      modalidades={modalidades.map(modalidade => modalidade.nome)}
-      comites={comites.map(comite => comite.nome)} 
-      subcomites={subcomites.map(subcomite => subcomite.nome)}
-      novoMembroCadastrado={membro => aoNovoMembroCadastrado(membro)}
+          pronomes={pronomes.map(pronome => pronome.nome)}
+          modalidades={modalidades.map(modalidade => modalidade.nome)}
+          comites={comites.map(comite => comite.nome)} 
+          subcomites={subcomites.map(subcomite => subcomite.nome)}
+          novoMembroCadastrado={membro => aoNovoMembroCadastrado(membro)}
       />
-      {comites.map(comite => <Comite key={comite.nome} nome={comite.nome} corPrimaria={comite.corPrimaria} corSecundaria={comite.corSecundaria}/>)}
+      {comites.map(comite => <Comite 
+          key={comite.nome} 
+          nome={comite.nome} 
+          corPrimaria={comite.corPrimaria} 
+          corSecundaria={comite.corSecundaria}
+          membros={membros}/>)}
       
 
     </div>

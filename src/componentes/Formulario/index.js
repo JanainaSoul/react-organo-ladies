@@ -11,14 +11,6 @@ import './Formulario.css'
 
 const Formulario = (props) => {
 
- 
-    
-
-    const subcomites = [
-        '',
-        'Refs',
-        'Não se aplica'
-    ]
 
     const [nome, setNome] = useState('')
     const [derbyName, setderbyName] = useState('')

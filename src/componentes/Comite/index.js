@@ -7,8 +7,17 @@ const Comite = (props) => { //dumb component
     return (
         <section className="comite" style={css}>
             <h3 style={{borderColor:props.corPrimaria}}>{props.nome}</h3> 
-            <Membro />
-            <Membro />
+            <div classname="membros">
+            {props.membros.map(membros => <Membro 
+                nome={membros.nome} 
+                derbyName={membros.derbyName} 
+                derbyNumber={membros.derbyNumber} 
+                pronomes={membros.pronome} 
+                modalidade={membros.modalidade} 
+                imagem={membros.imagem} 
+                comite={membros.comite} 
+                subcomite={membros.subcomite}/>)}
+            </div>
         </section>
     )
 }

@@ -11,3 +11,11 @@
     display: inline-block;
     padding-bottom: 8px;
 }
+
+.comite .membros {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 32px;
+    flex-wrap: wrap;
+    
+}

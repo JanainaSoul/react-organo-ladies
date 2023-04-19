@@ -1,19 +1,19 @@
 import './Membro.css'
 
-const Membro = () => {
+const Membro = ({nome, derbyName, derbyNumber, imagem, pronome, modalidade, comite, subcomite}) => {
     return (
-        <div className="membro">
+        <div className="colaborador">
             <div className="cabecalho">
-                <img src='./imagens/Fotos/Jana.jpg' alt='Janaina Soul'/>
+                <img src={imagem} alt={nome}/>
             </div>
             <div className="rodape">
-                <h3>Janaina</h3><br></br>
-                <h3>Jane Fox</h3><br></br>
-                <h3> #5284</h3><br></br>
-                <h4> Ela/Dela</h4><br></br>
-                <h4> Recreativo</h4><br></br>
-                <h4> Eventos e Merchan</h4><br></br>
-                <h4> Não se aplica</h4>
+                <h3>{nome}</h3><br></br>
+                <h3>{derbyName}</h3><br></br>
+                <h3>{derbyNumber}</h3><br></br>
+                <h3>{pronome}</h3><br></br>
+                <h4>{modalidade}</h4><br></br>
+                <h4>{comite}</h4><br></br>
+                <h4>{subcomite}</h4>
             </div>
         </div>
     )

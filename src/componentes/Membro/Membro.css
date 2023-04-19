@@ -1,45 +1,37 @@
-.membro {
-    width: 500px;
-    height: 1000px;
+.colaborador {
+    width: 280px;
 }
 
-.membro .cabecalho {
+.colaborador .cabecalho {
     background-color:  #F0F0F0;
     border-radius: 10px 10px 0px 0px;
 }
-.membro img {
-    width: 150px;
-    height: 200px;
-    border-radius: 30%;
+.colaborador img {
+    width: 100px;
+    border-radius: 50%;
     position: relative;
     bottom: -30px;
 }
 
-.membro .rodape {
+.colaborador .rodape {
     background: #FFFFFF;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
     border-radius: 0px 0px 10px 10px;
-    padding-top: 25px;
-    padding-bottom: 2px;
+    padding-top: 90px;
+    padding-bottom: 40px;
 }
 
-.membro .rodape h3 {
+.colaborador .rodape h4 {
     color: #6278F7;
-    font-size: 16px;
-    line-height: 15px;
+    font-size: 18px;
+    line-height: 22px;
     font-weight: bold;
-    padding-bottom: 2px;
-    margin-bottom: 2px;
+    margin-bottom: 8px;
 }
 
-.membro .rodape h4 {
-    font-size: 16px;
-    line-height: 15px;
+.colaborador .rodape h5 {
+    font-size: 18px;
+    line-height: 22px;
     color: #212121;
-    padding: 0 4px;
-    padding-bottom: 5px;
-    margin-bottom: 2px;
-    
-
-    
+    padding: 0 16px;
 }
