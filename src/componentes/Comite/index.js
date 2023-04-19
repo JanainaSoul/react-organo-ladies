@@ -1,3 +1,4 @@
+import Membro from '../Membro'
 import './Comite.css'
 
 const Comite = (props) => { //dumb component
@@ -6,6 +7,8 @@ const Comite = (props) => { //dumb component
     return (
         <section className="comite" style={css}>
             <h3 style={{borderColor:props.corPrimaria}}>{props.nome}</h3> 
+            <Membro />
+            <Membro />
         </section>
     )
 }
