@@ -8,7 +8,7 @@ function App() {
 
   const pronomes = [
     {
-      nome: '',
+      nome: ''
     },
     {
     nome:'Ela/Dela',
@@ -23,8 +23,9 @@ function App() {
 
 const modalidades = [
   {
-    nome:'',
-  },
+      nome: ''
+    },
+  
   {
     nome:'Recreativo',
   },
@@ -44,6 +45,10 @@ const modalidades = [
 
 
   const comites = [
+    {
+      nome: ''
+    },
+    
     {
       nome: 'Eventos e Merchan',
       corPrimaria: '#57C278',
@@ -82,6 +87,9 @@ const modalidades = [
   ]
 
     const subcomites = [
+      {
+        nome: ''
+      },
     {
       nome: 'Refs',
       corPrimaria: '#FFBA05',
@@ -117,8 +125,6 @@ const modalidades = [
           corSecundaria={comite.corSecundaria}
           membros={membros.filter(membro => membro.comite === comite.nome)}
           />)}
-      
-
     </div>
   );
 }

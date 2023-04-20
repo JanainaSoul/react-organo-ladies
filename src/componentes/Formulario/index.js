@@ -34,9 +34,15 @@ const Formulario = (props) => {
             modalidade,
             comite,
             subcomite
-        }
-
-        )
+        })
+        setNome('')
+        setderbyName('')
+        setderbyNumber('')
+        setImagem('')
+        setPronome('')//não reseta
+        setModalidade('')//não reseta
+        setComites('') //não reseta
+        setSubComite('')//não reseta
     }
 
     return (
