@@ -3,6 +3,7 @@ import Banner from './componentes/Banner/Banner.js';
 //import CampoTexto from './componentes/CampoTexto';
 import Formulario from './componentes/Formulario';
 import Comite from './componentes/Comite/index.js';
+import Rodape from './componentes/Rodape/index.js';
 
 function App() {
 
@@ -125,7 +126,9 @@ const modalidades = [
           corSecundaria={comite.corSecundaria}
           membros={membros.filter(membro => membro.comite === comite.nome)}
           />)}
+          <Rodape />
     </div>
+    
   );
 }
 
